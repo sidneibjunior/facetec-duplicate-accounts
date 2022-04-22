@@ -1,6 +1,8 @@
 # face-tec-duplicate-accounts
 This sample shows the basic steps to check for duplicate accounts using FaceTec [1-to-n-search](https://dev.facetec.com/1-to-n-search) tools.
 
+The main logic is in `/Processors/DuplicateAccountCheckProcessor.java`.
+
 The basic steps are:
 - Call [/enrollment-3d](https://dev.facetec.com/api-guide#enrollment-3d) API to enroll the user.
   - Parameters:
