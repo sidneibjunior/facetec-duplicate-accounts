@@ -11,14 +11,14 @@ The basic steps are:
   - It will return an error if the user is already enrolled
   - To avoid calling the `/enrollment-3d` for already registered users, we should test if the user is registered using [/3d-db-get](https://dev.facetec.com/api-guide#3d-db-get)
 - Call [/3d-db/enroll](https://dev.facetec.com/api-guide#3d-db-enroll) API to create the user in the 3D-DB
-  -  Parameters:
-    -  externalDatabaseRefID: userId
-    -  groupName
+  - Parameters:
+    - externalDatabaseRefID: userId
+    - groupName
   -  Result: The API will return success even if the user is already registered in 3D-DB
-- Call [/3d-db/search](https://dev.facetec.com/api-guide#3d-db-search) API to look for other accounts with similar faceMaps
-  -  Parameters:
-    -  externalDatabaseRefID: userId
-    -  groupName
+- Call [/3d-db/search](https://dev.facetec.com/api-guide#3d-db-search) API to look for other accounts with faceMaps similar to the faceMap stored in database for the given userId
+  - Parameters:
+    - externalDatabaseRefID: userId
+    - groupName
   -  Result:
     - The API will return a json with the following array, containing the accounts with similar faceMap:
 ```
